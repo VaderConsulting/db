@@ -1,6 +1,6 @@
 # db
 
-VB6 working copy of `db` from Dave Robinson's OneDrive Historical Dev `VB/Old` folder. Project title: Project1. Output: `Troll.exe`. `VersionCompanyName`: CSC.
+VB6 Kixtart log importer ("Troll") that walks a UNC log share, lists `*.log` files, and loads hostname plus file datetime into a temporary SQL Server table. Points at paths such as `\\cbdxaai\kixlog$\...` and uses SQLOLEDB against the EUC catalog on PERTHXSAC with integrated security. Start fills the file list and runs the extract into `tblDaveTemp`.
 
 **Source last updated:** 2026-08-27 · **Language:** VB6 · **Target:** VB6 Win32 · **Output:** WinForms exe
 
@@ -10,7 +10,7 @@ _Note: original OneDrive LastWriteTime values were wiped to 2026-08-27 by a zip 
 
 | Project | Language | Type | Purpose |
 |---------|----------|------|---------|
-| `Project1` (`Troll.vbp`) | VB6 | WinForms exe | Project1 |
+| `Project1` (`Troll.vbp`) | VB6 | WinForms exe | Kixtart log share scanner / SQL import |
 
 ## How to open
 
@@ -20,9 +20,11 @@ Open the `.vbp` in Visual Basic 6.0 IDE:
 ## Requirements
 
 - Visual Basic 6.0 IDE
+- Microsoft ActiveX Data Objects 2.0 Library
 - Registered OCX/DLL dependencies referenced by the `.vbp` (may need to be installed separately):
-  - `Dblist32.ocx`
   - `MSADODC.OCX`
+  - `Dblist32.ocx`
+  - `MSBIND.DLL`
 
 ## Attribution and provenance
 
