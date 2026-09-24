@@ -28,7 +28,7 @@ Open the `.vbp` in Visual Basic 6.0 IDE:
 
 ## Attribution and provenance
 
-Working copy from Dave Robinson's OneDrive Historical Dev folder `VB/Old/db`.
+Working copy from my Historical Dev folder `VB/Old/db`.
 Company names in project files: CSC.
 
 ## License
